@@ -20,9 +20,9 @@
             </a>
             <nav>
                 <ul class="site-nav">
-                    <li class="item"><a href="./index.html" class="link current">Студія</a></li>
-                    <li class="item"><a href="./portfolio.html">Портфоліо</a></li>
-                    <li class="item"><a href="#">Контакти</a></li>
+                    <li class="item"><a href="./index.html" class="menu-link link current">Студія</a></li>
+                    <li class="item"><a href="./portfolio.html" class="menu-link">Портфоліо</a></li>
+                    <li class="item"><a href="#" class="menu-link">Контакти</a></li>
                 </ul>
             </nav>
                 <ul class="contacts-list">
@@ -45,7 +45,7 @@
     <!--Hero section-->
         <section class="hero-section">
             <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-            <button type="button" class="hero-button">Замовити послугу</button>
+            <button type="button" class="hero-button" data-modal-open>Замовити послугу</button>
         </section>
     <!--Benefits-->
         <section class="main-section">
@@ -97,13 +97,22 @@
                 <h2 class="main-titles">Чим ми займаємося</h2>
                 <ul class="works">
                     <li class="item">
-                        <img src="./images/box1.jpg" alt="Фото роботи за ноутбуком 1" width="370" height="294"/>
+                        <div class="works-wrap">                        
+                            <img src="./images/box1.jpg" alt="Фото роботи за ноутбуком 1" width="370" height="294"/>
+                            <p class="our-works">Десктопні додатки</p>
+                        </div>
                     </li>
                     <li class="item">
-                        <img src="./images/box2.jpg" alt="Фото роботи за ноутбуком 2" width="370" height="294"/>
+                        <div class="works-wrap">
+                            <img src="./images/box2.jpg" alt="Фото роботи за ноутбуком 2" width="370" height="294"/>
+                            <p class="our-works">Мобільні додатки</p>
+                        </div>
                     </li>
                     <li class="item">
-                        <img src="./images/box3.jpg" alt="Фото роботи за ноутбуком 3" width="370" height="294"/>
+                        <div class="works-wrap">
+                            <img src="./images/box3.jpg" alt="Фото роботи за ноутбуком 3" width="370" height="294"/>
+                            <p class="our-works">Дизайнерські рішення</p>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -377,5 +386,15 @@
             </div>
         </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button type="button" class="close-button" data-modal-close>
+                <svg height="30" width="30" class="icon-modal">
+                    <use href="./images/sprite.svg#icon-close-black-18dp-2-1"></use>
+                    </svg>
+            </button>
+        </div>
+    </div>
+    <script src="./js/modal.js"></script>
 </body>
 </html>
